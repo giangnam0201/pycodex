@@ -1,0 +1,3 @@
+PySide6>=6.5
+Pygments>=2.14
+markdown>=3.6
