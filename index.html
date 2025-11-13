@@ -1,70 +1,461 @@
-<!DOCTYPE html>
-<html lang="en" class="h-full bg-gray-900"><link type="text/css" id="dark-mode" rel="stylesheet" href=""><style type="text/css" id="dark-mode-custom-style"></style><head><script src="moz-extension://85aeabb0-f8cd-4623-b91e-b825e83dd3c1/content/captcha/mt_captcha/interceptor.js"></script><script src="moz-extension://85aeabb0-f8cd-4623-b91e-b825e83dd3c1/content/captcha/turnstile/interceptor.js"></script><script src="moz-extension://85aeabb0-f8cd-4623-b91e-b825e83dd3c1/content/captcha/turnstile/hunter.js"></script><script src="moz-extension://85aeabb0-f8cd-4623-b91e-b825e83dd3c1/content/captcha/amazon_waf/interceptor.js"></script><script src="moz-extension://85aeabb0-f8cd-4623-b91e-b825e83dd3c1/content/captcha/yandex/interceptor.js"></script><script src="moz-extension://85aeabb0-f8cd-4623-b91e-b825e83dd3c1/content/captcha/lemin/interceptor.js"></script><script src="moz-extension://85aeabb0-f8cd-4623-b91e-b825e83dd3c1/content/captcha/arkoselabs/hunter.js"></script><script src="moz-extension://85aeabb0-f8cd-4623-b91e-b825e83dd3c1/content/captcha/arkoselabs/interceptor.js"></script><script src="moz-extension://85aeabb0-f8cd-4623-b91e-b825e83dd3c1/content/captcha/recaptcha/interceptor.js"></script><script src="moz-extension://85aeabb0-f8cd-4623-b91e-b825e83dd3c1/content/captcha/recaptcha/hunter.js"></script><script src="moz-extension://85aeabb0-f8cd-4623-b91e-b825e83dd3c1/content/captcha/keycaptcha/hunter.js"></script><script src="moz-extension://85aeabb0-f8cd-4623-b91e-b825e83dd3c1/content/captcha/hcaptcha/hunter.js"></script><script src="moz-extension://85aeabb0-f8cd-4623-b91e-b825e83dd3c1/content/captcha/hcaptcha/interceptor.js"></script><script src="moz-extension://85aeabb0-f8cd-4623-b91e-b825e83dd3c1/content/captcha/geetest_v4/interceptor.js"></script><script src="moz-extension://85aeabb0-f8cd-4623-b91e-b825e83dd3c1/content/captcha/geetest/interceptor.js"></script><script src="moz-extension://85aeabb0-f8cd-4623-b91e-b825e83dd3c1/content/communication_helpers.js"></script><script src="moz-extension://85aeabb0-f8cd-4623-b91e-b825e83dd3c1/content/core_helpers.js"></script>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>About PyCodeX</title>
-    <!-- Load Tailwind CSS -->
-    <script src="https://cdn.tailwindcss.com"></script>
-    <!-- Load Inter font -->
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin="">
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&amp;display=swap" rel="stylesheet">
-    <style>
-        body {
-            font-family: 'Inter', sans-serif;
-        }
-        /* Simple gradient animation for the button */
-        .btn-gradient {
-            background-image: linear-gradient(to right, #4f46e5 0%, #7c3aed 50%, #4f46e5 100%);
-            background-size: 200% auto;
-            transition: background-position 0.5s ease;
-        }
-        .btn-gradient:hover {
-            background-position: right center;
-        }
-    </style>
-<style>*, ::before, ::after{--tw-border-spacing-x:0;--tw-border-spacing-y:0;--tw-translate-x:0;--tw-translate-y:0;--tw-rotate:0;--tw-skew-x:0;--tw-skew-y:0;--tw-scale-x:1;--tw-scale-y:1;--tw-pan-x: ;--tw-pan-y: ;--tw-pinch-zoom: ;--tw-scroll-snap-strictness:proximity;--tw-gradient-from-position: ;--tw-gradient-via-position: ;--tw-gradient-to-position: ;--tw-ordinal: ;--tw-slashed-zero: ;--tw-numeric-figure: ;--tw-numeric-spacing: ;--tw-numeric-fraction: ;--tw-ring-inset: ;--tw-ring-offset-width:0px;--tw-ring-offset-color:#fff;--tw-ring-color:rgb(59 130 246 / 0.5);--tw-ring-offset-shadow:0 0 #0000;--tw-ring-shadow:0 0 #0000;--tw-shadow:0 0 #0000;--tw-shadow-colored:0 0 #0000;--tw-blur: ;--tw-brightness: ;--tw-contrast: ;--tw-grayscale: ;--tw-hue-rotate: ;--tw-invert: ;--tw-saturate: ;--tw-sepia: ;--tw-drop-shadow: ;--tw-backdrop-blur: ;--tw-backdrop-brightness: ;--tw-backdrop-contrast: ;--tw-backdrop-grayscale: ;--tw-backdrop-hue-rotate: ;--tw-backdrop-invert: ;--tw-backdrop-opacity: ;--tw-backdrop-saturate: ;--tw-backdrop-sepia: ;--tw-contain-size: ;--tw-contain-layout: ;--tw-contain-paint: ;--tw-contain-style: }::backdrop{--tw-border-spacing-x:0;--tw-border-spacing-y:0;--tw-translate-x:0;--tw-translate-y:0;--tw-rotate:0;--tw-skew-x:0;--tw-skew-y:0;--tw-scale-x:1;--tw-scale-y:1;--tw-pan-x: ;--tw-pan-y: ;--tw-pinch-zoom: ;--tw-scroll-snap-strictness:proximity;--tw-gradient-from-position: ;--tw-gradient-via-position: ;--tw-gradient-to-position: ;--tw-ordinal: ;--tw-slashed-zero: ;--tw-numeric-figure: ;--tw-numeric-spacing: ;--tw-numeric-fraction: ;--tw-ring-inset: ;--tw-ring-offset-width:0px;--tw-ring-offset-color:#fff;--tw-ring-color:rgb(59 130 246 / 0.5);--tw-ring-offset-shadow:0 0 #0000;--tw-ring-shadow:0 0 #0000;--tw-shadow:0 0 #0000;--tw-shadow-colored:0 0 #0000;--tw-blur: ;--tw-brightness: ;--tw-contrast: ;--tw-grayscale: ;--tw-hue-rotate: ;--tw-invert: ;--tw-saturate: ;--tw-sepia: ;--tw-drop-shadow: ;--tw-backdrop-blur: ;--tw-backdrop-brightness: ;--tw-backdrop-contrast: ;--tw-backdrop-grayscale: ;--tw-backdrop-hue-rotate: ;--tw-backdrop-invert: ;--tw-backdrop-opacity: ;--tw-backdrop-saturate: ;--tw-backdrop-sepia: ;--tw-contain-size: ;--tw-contain-layout: ;--tw-contain-paint: ;--tw-contain-style: }/* ! tailwindcss v3.4.17 | MIT License | https://tailwindcss.com */*,::after,::before{box-sizing:border-box;border-width:0;border-style:solid;border-color:#e5e7eb}::after,::before{--tw-content:''}:host,html{line-height:1.5;-webkit-text-size-adjust:100%;-moz-tab-size:4;tab-size:4;font-family:ui-sans-serif, system-ui, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";font-feature-settings:normal;font-variation-settings:normal;-webkit-tap-highlight-color:transparent}body{margin:0;line-height:inherit}hr{height:0;color:inherit;border-top-width:1px}abbr:where([title]){-webkit-text-decoration:underline dotted;text-decoration:underline dotted}h1,h2,h3,h4,h5,h6{font-size:inherit;font-weight:inherit}a{color:inherit;text-decoration:inherit}b,strong{font-weight:bolder}code,kbd,pre,samp{font-family:ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, "Liberation Mono", "Courier New", monospace;font-feature-settings:normal;font-variation-settings:normal;font-size:1em}small{font-size:80%}sub,sup{font-size:75%;line-height:0;position:relative;vertical-align:baseline}sub{bottom:-.25em}sup{top:-.5em}table{text-indent:0;border-color:inherit;border-collapse:collapse}button,input,optgroup,select,textarea{font-family:inherit;font-feature-settings:inherit;font-variation-settings:inherit;font-size:100%;font-weight:inherit;line-height:inherit;letter-spacing:inherit;color:inherit;margin:0;padding:0}button,select{text-transform:none}button,input:where([type=button]),input:where([type=reset]),input:where([type=submit]){-webkit-appearance:button;background-color:transparent;background-image:none}:-moz-focusring{outline:auto}:-moz-ui-invalid{box-shadow:none}progress{vertical-align:baseline}::-webkit-inner-spin-button,::-webkit-outer-spin-button{height:auto}[type=search]{-webkit-appearance:textfield;outline-offset:-2px}::-webkit-search-decoration{-webkit-appearance:none}::-webkit-file-upload-button{-webkit-appearance:button;font:inherit}summary{display:list-item}blockquote,dd,dl,figure,h1,h2,h3,h4,h5,h6,hr,p,pre{margin:0}fieldset{margin:0;padding:0}legend{padding:0}menu,ol,ul{list-style:none;margin:0;padding:0}dialog{padding:0}textarea{resize:vertical}input::placeholder,textarea::placeholder{opacity:1;color:#9ca3af}[role=button],button{cursor:pointer}:disabled{cursor:default}audio,canvas,embed,iframe,img,object,svg,video{display:block;vertical-align:middle}img,video{max-width:100%;height:auto}[hidden]:where(:not([hidden=until-found])){display:none}.mx-auto{margin-left:auto;margin-right:auto}.mb-10{margin-bottom:2.5rem}.mb-4{margin-bottom:1rem}.mb-6{margin-bottom:1.5rem}.mt-8{margin-top:2rem}.inline-block{display:inline-block}.flex{display:flex}.h-20{height:5rem}.h-full{height:100%}.w-20{width:5rem}.w-full{width:100%}.max-w-2xl{max-width:42rem}.transform{transform:translate(var(--tw-translate-x), var(--tw-translate-y)) rotate(var(--tw-rotate)) skewX(var(--tw-skew-x)) skewY(var(--tw-skew-y)) scaleX(var(--tw-scale-x)) scaleY(var(--tw-scale-y))}.items-center{align-items:center}.justify-center{justify-content:center}.rounded-lg{border-radius:0.5rem}.border{border-width:1px}.border-gray-700{--tw-border-opacity:1;border-color:rgb(55 65 81 / var(--tw-border-opacity, 1))}.bg-gray-800{--tw-bg-opacity:1;background-color:rgb(31 41 55 / var(--tw-bg-opacity, 1))}.bg-gray-900{--tw-bg-opacity:1;background-color:rgb(17 24 39 / var(--tw-bg-opacity, 1))}.p-6{padding:1.5rem}.p-8{padding:2rem}.px-8{padding-left:2rem;padding-right:2rem}.py-3{padding-top:0.75rem;padding-bottom:0.75rem}.text-center{text-align:center}.text-4xl{font-size:2.25rem;line-height:2.5rem}.text-lg{font-size:1.125rem;line-height:1.75rem}.text-xs{font-size:0.75rem;line-height:1rem}.font-bold{font-weight:700}.font-semibold{font-weight:600}.text-gray-300{--tw-text-opacity:1;color:rgb(209 213 219 / var(--tw-text-opacity, 1))}.text-gray-500{--tw-text-opacity:1;color:rgb(107 114 128 / var(--tw-text-opacity, 1))}.text-indigo-400{--tw-text-opacity:1;color:rgb(129 140 248 / var(--tw-text-opacity, 1))}.text-white{--tw-text-opacity:1;color:rgb(255 255 255 / var(--tw-text-opacity, 1))}.shadow-2xl{--tw-shadow:0 25px 50px -12px rgb(0 0 0 / 0.25);--tw-shadow-colored:0 25px 50px -12px var(--tw-shadow-color);box-shadow:var(--tw-ring-offset-shadow, 0 0 #0000), var(--tw-ring-shadow, 0 0 #0000), var(--tw-shadow)}.shadow-lg{--tw-shadow:0 10px 15px -3px rgb(0 0 0 / 0.1), 0 4px 6px -4px rgb(0 0 0 / 0.1);--tw-shadow-colored:0 10px 15px -3px var(--tw-shadow-color), 0 4px 6px -4px var(--tw-shadow-color);box-shadow:var(--tw-ring-offset-shadow, 0 0 #0000), var(--tw-ring-shadow, 0 0 #0000), var(--tw-shadow)}.transition-transform{transition-property:transform;transition-timing-function:cubic-bezier(0.4, 0, 0.2, 1);transition-duration:150ms}.hover\:scale-105:hover{--tw-scale-x:1.05;--tw-scale-y:1.05;transform:translate(var(--tw-translate-x), var(--tw-translate-y)) rotate(var(--tw-rotate)) skewX(var(--tw-skew-x)) skewY(var(--tw-skew-y)) scaleX(var(--tw-scale-x)) scaleY(var(--tw-scale-y))}@media (min-width: 640px){.sm\:p-12{padding:3rem}.sm\:text-5xl{font-size:3rem;line-height:1}.sm\:text-xl{font-size:1.25rem;line-height:1.75rem}}</style><captcha-widgets></captcha-widgets></head>
-<body class="h-full flex items-center justify-center text-white p-6">
-    <div class="max-w-2xl w-full bg-gray-800 rounded-lg shadow-2xl p-8 sm:p-12 text-center border border-gray-700">
-        
-        <!-- Logo/Icon Placeholder -->
-        <div class="mb-6">
-            <svg class="w-20 h-20 mx-auto text-indigo-400" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
-                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M10 20l4-16m-4 4l4 4m-4-4l-4 4m0 0l-4-4m12 4l4 4m-4-4l4-4m-4 4v4m0 0h4m-4 0H6"></path>
-            </svg>
-        </div>
-        
-        <!-- Project Title -->
-        <h1 class="text-4xl sm:text-5xl font-bold mb-4">PyCodeX</h1>
-        
-        <!-- Project Description -->
-        <p class="text-lg sm:text-xl text-gray-300 mb-10">
-            Welcome to PyCodeX, your new favorite code editor. 
-            Inspired by powerful tools like VS Code, PyCodeX is a lightweight, fast, and modern application 
-            designed to streamline your development workflow.
-        </p>
-        
-        <!-- Download Button -->
-        <a href="/app/pycodex.exe" download="" class="inline-block btn-gradient text-white font-semibold py-3 px-8 rounded-lg text-lg shadow-lg transform transition-transform hover:scale-105">
-            <!-- Download Icon -->
-            <svg class_g1="w-6 h-6 inline-block -mt-1 mr-2" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
-                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 16v1a3 3 0 003 3h10a3 3 0 003-3v-1m-4-4l-4 4m0 0l-4-4m4 4V4"></path>
-            </svg>
-            Download PyCodeX
-        </a>
-<a download="" class="inline-block btn-gradient text-white font-semibold py-3 px-8 rounded-lg text-lg shadow-lg transform transition-transform hover:scale-105" href="https://github.com/giangnam0201/pycodex/tree/main/src">
-            <!-- Download Icon -->
-            <svg class_g1="w-6 h-6 inline-block -mt-1 mr-2" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
-                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 16v1a3 3 0 003 3h10a3 3 0 003-3v-1m-4-4l-4 4m0 0l-4-4m4 4V4"></path>
-            </svg>
-           &amp; Soruce   PyCodeX &amp;
-        </a>
-        
-        <!-- Disclaimer -->
-        <p class="text-xs text-gray-500 mt-8">
-            Currently available for Windows.
-        </p>
-    </div>
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>PyCodeX Pro — VS Code–style Editor in Python</title>
+  <meta name="description" content="PyCodeX Pro is a compact, VS Code–style editor built with PySide6. Fast, focused, and beautiful.">
+  <meta property="og:title" content="PyCodeX Pro — VS Code–style Editor in Python">
+  <meta property="og:description" content="Tabbed editor, syntax highlighting, file explorer, command palette, project search, Git panel, markdown preview, and more.">
+  <meta name="theme-color" content="#0b0e14">
 
-</body></html>
+  <style>
+    /* ---------- CSS Reset (tiny) ---------- */
+    *,*::before,*::after{box-sizing:border-box}html,body{height:100%}body{margin:0;font-family: ui-sans-serif, system-ui, -apple-system, Segoe UI, Roboto, Ubuntu, Cantarell, Noto Sans, Arial, "Apple Color Emoji","Segoe UI Emoji";line-height:1.5;background:#0b0e14;color:#e6e6e6;-webkit-font-smoothing:antialiased;-moz-osx-font-smoothing:grayscale}
+    img,svg{display:block;max-width:100%}a{color:inherit;text-decoration:none}button{font:inherit}
+    :root{
+      --bg:#0b0e14;            /* deep-night */
+      --panel:#0f131a;         /* panel base */
+      --muted:#9aa4b2;         /* soft text */
+      --ink:#e6e6e6;
+      --accent:#6cf0ff;        /* neon cyan */
+      --accent-2:#7c5cff;      /* neon violet */
+      --accent-3:#39ff88;      /* neon green */
+      --glow:0 0 1.25rem rgba(108,240,255,.35), 0 0 2.5rem rgba(124,92,255,.20);
+      --radius:14px;
+      --shadow:0 10px 30px rgba(0,0,0,.45);
+    }
+
+    /* ---------- Layout ---------- */
+    header{
+      position:sticky; top:0; z-index:10;
+      background:linear-gradient(180deg, rgba(11,14,20,.85), rgba(11,14,20,.55) 70%, transparent);
+      backdrop-filter:saturate(1.2) blur(8px);
+      border-bottom:1px solid rgba(124,92,255,.15);
+    }
+    .nav{
+      max-width:1200px; margin:0 auto; display:flex; gap:16px; align-items:center; padding:14px 20px;
+    }
+    .brand{
+      display:flex; align-items:center; gap:10px; font-weight:700; letter-spacing:.3px;
+    }
+    .logo{
+      width:28px; height:28px; border-radius:8px;
+      background: radial-gradient(100% 100% at 30% 30%, var(--accent), var(--accent-2));
+      box-shadow: var(--glow);
+    }
+    .spacer{flex:1}
+    .nav a.cta{padding:10px 14px; border:1px solid rgba(108,240,255,.35); border-radius:10px}
+    .nav a.cta:hover{border-color:rgba(108,240,255,.7); box-shadow:var(--glow)}
+
+    main{isolation:isolate}
+    .hero{
+      position:relative; min-height:72svh; display:grid; place-items:center; overflow:hidden;
+      border-bottom:1px solid rgba(124,92,255,.15);
+    }
+    #bg3d{
+      position:absolute; inset:0; z-index:-1; display:block; width:100%; height:100%;
+    }
+    .hero-inner{
+      max-width:1100px; padding:80px 20px; text-align:center;
+    }
+    .badge{
+      display:inline-flex; align-items:center; gap:.6rem;
+      padding:8px 12px; border-radius:999px; font-size:.9rem; color:#cfefff;
+      background:linear-gradient(90deg, rgba(124,92,255,.25), rgba(108,240,255,.18));
+      border:1px solid rgba(124,92,255,.35);
+      box-shadow: var(--glow);
+    }
+    .title{
+      margin:18px auto 10px; font-weight:800; letter-spacing:.2px; line-height:1.1;
+      font-size:clamp(2rem, 1.2rem + 4vw, 4rem);
+      background:linear-gradient(90deg, var(--ink), #d1d9ff); -webkit-background-clip:text; background-clip:text; color:transparent;
+      text-shadow:0 0 .4rem rgba(124,92,255,.18);
+    }
+    .subtitle{
+      color:var(--muted); max-width:800px; margin:0 auto 28px; font-size:1.05rem;
+    }
+    .cta-row{display:flex; flex-wrap:wrap; gap:14px; justify-content:center; margin-top:26px}
+
+    .btn{
+      position:relative; display:inline-flex; align-items:center; gap:.6rem; padding:14px 18px;
+      border-radius:12px; border:1px solid rgba(108,240,255,.35);
+      background:linear-gradient(180deg, rgba(15,19,26,.85), rgba(15,19,26,.6));
+      box-shadow: var(--glow); transition: transform .2s ease, box-shadow .2s ease, border-color .2s ease;
+      will-change:transform; cursor:pointer;
+    }
+    .btn:hover{transform:translateY(-2px); border-color:rgba(108,240,255,.85); box-shadow:0 0 0 .25rem rgba(108,240,255,.08), var(--glow)}
+    .btn--solid{
+      background:linear-gradient(180deg, rgba(108,240,255,.20), rgba(124,92,255,.20));
+      border-color:rgba(124,92,255,.55);
+    }
+    .btn svg{width:18px; height:18px}
+    .btn small{opacity:.8}
+
+    /* ---------- Panels ---------- */
+    section{padding:64px 20px}
+    .wrap{max-width:1100px; margin:0 auto}
+
+    .panel{
+      background:linear-gradient(180deg, rgba(16,20,28,.85), rgba(10,13,19,.85));
+      border:1px solid rgba(124,92,255,.18); border-radius:var(--radius); box-shadow:var(--shadow);
+    }
+
+    /* Features grid */
+    .grid{
+      display:grid; gap:16px; grid-template-columns:repeat(12,1fr);
+    }
+    .feature{
+      grid-column: span 6;
+      padding:18px; border-radius:14px;
+      background:linear-gradient(180deg, rgba(20,26,36,.8), rgba(14,18,25,.8));
+      border:1px solid rgba(124,92,255,.12);
+    }
+    .feature h3{margin:0 0 6px; font-size:1.05rem}
+    .feature p{margin:0; color:#aeb7c6; font-size:.98rem}
+    .icon{
+      width:22px; height:22px; margin-bottom:8px; color:var(--accent);
+      filter:drop-shadow(0 0 8px rgba(108,240,255,.35));
+    }
+
+    /* Shortcuts table */
+    .kbd-table{
+      width:100%; border-collapse:separate; border-spacing:0 8px; margin-top:10px;
+    }
+    .kbd-row{
+      background:linear-gradient(180deg, rgba(20,26,36,.8), rgba(12,16,22,.8));
+      border:1px solid rgba(124,92,255,.12); border-radius:12px; overflow:hidden;
+    }
+    .kbd-row td{padding:14px 16px}
+    kbd{
+      background:#0f1420; border:1px solid rgba(108,240,255,.35);
+      border-bottom-color:rgba(124,92,255,.35);
+      border-radius:8px; padding:3px 7px; font-size:.95rem; box-shadow:var(--glow)
+    }
+
+    .columns{
+      display:grid; gap:18px; grid-template-columns: 1.2fr .8fr;
+    }
+    @media (max-width: 900px){
+      .columns{grid-template-columns: 1fr}
+      .grid .feature{grid-column: span 12}
+    }
+
+    /* Code-like preview card */
+    .preview{
+      position:relative; padding:0; overflow:hidden;
+    }
+    .titlebar{
+      display:flex; gap:10px; align-items:center; padding:12px 14px; font-size:.92rem; color:#cdd4e6;
+      background:linear-gradient(180deg, #111827, #0d1420); border-bottom:1px solid rgba(124,92,255,.18)
+    }
+    .dots{display:inline-flex; gap:8px}
+    .dots i{width:10px; height:10px; border-radius:999px; display:inline-block}
+    .dots i:nth-child(1){background:#ff5f56}
+    .dots i:nth-child(2){background:#ffbd2e}
+    .dots i:nth-child(3){background:#27c93f}
+    pre{
+      margin:0; padding:16px; overflow:auto; font-family: ui-monospace, SFMono-Regular, Menlo, Consolas, "Liberation Mono", monospace;
+      font-size:.92rem; color:#e6f7ff; background:linear-gradient(180deg, #0b1019, #0b0f18);
+    }
+    .hl-cyan{color:#6cf0ff}
+    .hl-violet{color:#b7a1ff}
+    .hl-green{color:#39ff88}
+    .hl-gray{color:#9aa4b2}
+
+    /* Footer */
+    footer{padding:36px 20px; border-top:1px solid rgba(124,92,255,.15); color:#a1abc0}
+    footer a:hover{color:#fff}
+
+    /* Motion safety */
+    @media (prefers-reduced-motion: reduce) {
+      .btn:hover{transform:none}
+    }
+  </style>
+</head>
+
+<body>
+  <!-- ======= NAV ======= -->
+  <header>
+    <nav class="nav" aria-label="Primary">
+      <div class="brand" aria-label="PyCodeX Pro">
+        <span class="logo" aria-hidden="true"></span>
+        <span>PyCodeX <span style="opacity:.7">Pro</span></span>
+      </div>
+      <div class="spacer"></div>
+      <a class="cta" href="#features">Features</a>
+      <a class="cta" href="#shortcuts">Shortcuts</a>
+      <a class="cta" href="#about">About</a>
+      <a class="cta" href="/app/pycodex.exe" download>Download</a>
+    </nav>
+  </header>
+
+  <!-- ======= HERO ======= -->
+  <section class="hero" aria-label="Intro">
+    <canvas id="bg3d" aria-hidden="true"></canvas>
+
+    <div class="hero-inner panel" id="tiltCard" role="region" aria-label="PyCodeX Pro overview" tabindex="0">
+      <span class="badge">⚡ Built with <strong>PySide6</strong> • VS Code–style • Lightweight</span>
+      <h1 class="title">PyCodeX Pro</h1>
+      <p class="subtitle">
+        A compact, <strong>VS Code–style editor</strong> in Python—focused on <em>look</em>, <em>responsiveness</em>,
+        and the core features you actually use. No bloat. Just flow.
+      </p>
+
+      <div class="cta-row" role="group" aria-label="Primary actions">
+        <a class="btn btn--solid" href="/app/pycodex.exe" download aria-label="Download PyCodeX Pro for Windows">
+          <!-- download icon -->
+          <svg viewBox="0 0 24 24" fill="none" aria-hidden="true"><path d="M12 3v10m0 0 4-4m-4 4-4-4M4 15v3a3 3 0 0 0 3 3h10a3 3 0 0 0 3-3v-3" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg>
+          <span>Download</span>
+          <small>(/app/pycodex.exe)</small>
+        </a>
+
+        <a class="btn" href="https://github.com/giangnam0201/pycodex/tree/main/src" target="_blank" rel="noopener" aria-label="Open source code on GitHub">
+          <!-- code icon -->
+          <svg viewBox="0 0 24 24" fill="none" aria-hidden="true"><path d="M8 7v10M16 7v10M4 12h16" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"/></svg>
+          <span>View Source (Python)</span>
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <!-- ======= FEATURES ======= -->
+  <section id="features" class="wrap">
+    <div class="columns">
+      <div class="panel" style="padding:22px">
+        <h2 style="margin:0 0 12px">Highlights</h2>
+        <div class="grid">
+          <div class="feature">
+            <svg class="icon" viewBox="0 0 24 24" fill="none" aria-hidden="true"><path d="M4 6h16M4 12h16M4 18h10" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"/></svg>
+            <h3>Tabbed editor</h3>
+            <p>Line numbers and current‑line highlight for quick orientation.</p>
+          </div>
+          <div class="feature">
+            <svg class="icon" viewBox="0 0 24 24" fill="none" aria-hidden="true"><path d="M6 6h12v12H6z" stroke="currentColor" stroke-width="1.5"/><path d="M8 9h8M8 12h5M8 15h6" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"/></svg>
+            <h3>Syntax highlighting</h3>
+            <p>Essentials for <strong>Python</strong>, <strong>JSON</strong>, and <strong>Markdown</strong>.</p>
+          </div>
+          <div class="feature">
+            <svg class="icon" viewBox="0 0 24 24" fill="none" aria-hidden="true"><path d="M4 5h6v14H4zM14 5h6v8h-6zM14 15h6v4h-6z" stroke="currentColor" stroke-width="1.5" stroke-linejoin="round"/></svg>
+            <h3>File explorer dock</h3>
+            <p>With fixed Windows path handling for painless navigation.</p>
+          </div>
+          <div class="feature">
+            <svg class="icon" viewBox="0 0 24 24" fill="none" aria-hidden="true"><path d="M12 6v12M6 12h12" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"/></svg>
+            <h3>Command palette</h3>
+            <p>Fuzzy filtering via <kbd>Ctrl</kbd>+<kbd>Shift</kbd>+<kbd>P</kbd> for everything.</p>
+          </div>
+          <div class="feature">
+            <svg class="icon" viewBox="0 0 24 24" fill="none" aria-hidden="true"><path d="M3 7h18M3 12h18M3 17h18" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"/></svg>
+            <h3>Project‑wide search</h3>
+            <p>Threaded search that keeps the UI smooth while it scans.</p>
+          </div>
+          <div class="feature">
+            <svg class="icon" viewBox="0 0 24 24" fill="none" aria-hidden="true"><path d="M4 18h16M7 18l3-12h4l3 12" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg>
+            <h3>Integrated task runner</h3>
+            <p>Run arbitrary shell commands without leaving the editor.</p>
+          </div>
+          <div class="feature">
+            <svg class="icon" viewBox="0 0 24 24" fill="none" aria-hidden="true"><path d="M7 7h10v10H7z" stroke="currentColor" stroke-width="1.5"/><path d="M9 12h6M12 9v6" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"/></svg>
+            <h3>Git panel</h3>
+            <p>Status, stage‑all, commit — powered by your local <code>git</code> CLI.</p>
+          </div>
+          <div class="feature">
+            <svg class="icon" viewBox="0 0 24 24" fill="none" aria-hidden="true"><path d="M6 7h12M6 12h12M6 17h12" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"/></svg>
+            <h3>Markdown preview dock</h3>
+            <p>See your docs render live alongside the editor.</p>
+          </div>
+          <div class="feature">
+            <svg class="icon" viewBox="0 0 24 24" fill="none" aria-hidden="true"><path d="M6 6h12v12H6z" stroke="currentColor" stroke-width="1.5"/><path d="M9 9h6M9 12h6M9 15h6" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"/></svg>
+            <h3>Persistent settings</h3>
+            <p>Saved to <code>~/.pycodex_pro/settings/settings.json</code>.</p>
+          </div>
+          <div class="feature">
+            <svg class="icon" viewBox="0 0 24 24" fill="none" aria-hidden="true"><path d="M5 19V5l14 7-14 7z" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg>
+            <h3>Tiny plugin system</h3>
+            <p>Drop <code>.py</code> files into <code>.../plugins/user</code> to extend.</p>
+          </div>
+        </div>
+      </div>
+
+      <div class="panel preview" aria-label="Preview">
+        <div class="titlebar">
+          <div class="dots"><i></i><i></i><i></i></div>
+          <span style="opacity:.85">main.py — PyCodeX Pro</span>
+        </div>
+<pre><code><span class="hl-gray"># PyCodeX Pro — quick taste</span>
+<span class="hl-cyan">from</span> pycodex <span class="hl-cyan">import</span> Editor
+app = Editor()
+app.open(<span class="hl-violet">"README.md"</span>)
+app.run(<span class="hl-violet">"build"</span>)  <span class="hl-gray"># task runner</span>
+app.git.commit(<span class="hl-violet">"feat: first commit"</span>)
+app.show_markdown_preview(<span class="hl-violet">True</span>)
+</code></pre>
+      </div>
+    </div>
+  </section>
+
+  <!-- ======= SHORTCUTS ======= -->
+  <section id="shortcuts" class="wrap">
+    <div class="panel" style="padding:22px">
+      <h2 style="margin:0 0 6px">Keys &amp; Shortcuts</h2>
+      <p style="margin:0 0 18px; color:var(--muted)">Familiar moves for muscle memory.</p>
+      <table class="kbd-table" role="table" aria-label="Keyboard shortcuts">
+        <tbody>
+          <tr class="kbd-row"><td><kbd>Ctrl</kbd> + <kbd>O</kbd></td><td>Open file dialog</td></tr>
+          <tr class="kbd-row"><td><kbd>Ctrl</kbd> + <kbd>S</kbd></td><td>Save</td></tr>
+          <tr class="kbd-row"><td><kbd>Ctrl</kbd> + <kbd>Shift</kbd> + <kbd>S</kbd></td><td>Save all</td></tr>
+          <tr class="kbd-row"><td><kbd>Ctrl</kbd> + <kbd>W</kbd></td><td>Close tab</td></tr>
+          <tr class="kbd-row"><td><kbd>Ctrl</kbd> + <kbd>F</kbd></td><td>Find in file</td></tr>
+          <tr class="kbd-row"><td><kbd>Ctrl</kbd> + <kbd>Shift</kbd> + <kbd>F</kbd></td><td>Find in files</td></tr>
+          <tr class="kbd-row"><td><kbd>Ctrl</kbd> + <kbd>Shift</kbd> + <kbd>P</kbd></td><td>Command palette</td></tr>
+        </tbody>
+      </table>
+    </div>
+  </section>
+
+  <!-- ======= ABOUT / DISCLAIMER ======= -->
+  <section id="about" class="wrap">
+    <div class="panel" style="padding:22px">
+      <h2 style="margin:0 0 10px">About</h2>
+      <p style="color:var(--muted); margin:0 0 10px">
+        PyCodeX Pro is a compact, VS Code–style editor built with PySide6. It focuses on look, responsiveness, and the core features most people expect from VS Code—without bloat.
+      </p>
+      <p style="color:#c5cde0; margin:0">
+        <strong>Disclaimer:</strong> PyCodeX Pro is <em>not</em> affiliated with Microsoft or Visual Studio Code.
+      </p>
+    </div>
+  </section>
+
+  <!-- ======= FOOTER ======= -->
+  <footer class="wrap" role="contentinfo">
+    <div style="display:flex; gap:10px; justify-content:space-between; align-items:center; flex-wrap:wrap">
+      <div>© <span id="year"></span> PyCodeX Pro</div>
+      <div style="display:flex; gap:14px; align-items:center">
+        <a href="/app/pycodex.exe" download title="Download the Windows build">Download</a>
+        <span style="opacity:.5">•</span>
+        <a href="https://github.com/giangnam0201/pycodex/tree/main/src" target="_blank" rel="noopener">Source (Python)</a>
+      </div>
+    </div>
+  </footer>
+
+  <!-- ======= JS: 3D starfield + tilt ======= -->
+  <script>
+    // Year in footer
+    document.getElementById('year').textContent = new Date().getFullYear();
+
+    // ---------- Lightweight 3D starfield (Canvas, no libs) ----------
+    (function(){
+      const canvas = document.getElementById('bg3d');
+      const ctx = canvas.getContext('2d', { alpha: true });
+      const hero = document.querySelector('.hero');
+      let w, h, cx, cy, stars, speed, fov, mouseX=0, mouseY=0, reduceMotion=false;
+
+      function resize(){
+        const rect = hero.getBoundingClientRect();
+        w = canvas.width = Math.max(rect.width, window.innerWidth);
+        h = canvas.height = Math.max(rect.height, 500);
+        cx = w/2; cy = h/2;
+        fov = Math.max(240, Math.min(420, Math.hypot(w,h)/3));
+      }
+
+      function init(){
+        const count = Math.min(900, Math.floor((w*h)/2500)); // density
+        stars = new Array(count).fill(0).map(()=>randomStar());
+        speed = Math.max(0.6, Math.min(1.8, (w+h)/2000));
+      }
+
+      function randomStar(){
+        // position in 3D space
+        return {
+          x: (Math.random()-0.5)*w*2,
+          y: (Math.random()-0.5)*h*2,
+          z: Math.random()*w + 1,
+          s: Math.random()*1.8 + 0.2
+        };
+      }
+
+      function draw(){
+        if (reduceMotion) {
+          // Static gradient if user prefers reduced motion
+          const g = ctx.createLinearGradient(0,0,w,h);
+          g.addColorStop(0,'rgba(124,92,255,0.18)');
+          g.addColorStop(1,'rgba(108,240,255,0.08)');
+          ctx.fillStyle = g; ctx.fillRect(0,0,w,h);
+          return;
+        }
+
+        ctx.clearRect(0,0,w,h);
+
+        // subtle gradient backdrop for depth
+        const g = ctx.createRadialGradient(cx, cy, Math.min(w,h)/8, cx, cy, Math.hypot(w,h)/1.2);
+        g.addColorStop(0,'rgba(124,92,255,0.18)');
+        g.addColorStop(1,'rgba(0,0,0,0)');
+        ctx.fillStyle = g; ctx.fillRect(0,0,w,h);
+
+        // parallax (mouse influences yaw/pitch)
+        const yaw = (mouseX - cx) / w;    // -0.5..0.5
+        const pitch = (mouseY - cy) / h;  // -0.5..0.5
+
+        for (let i=0; i<stars.length; i++){
+          const star = stars[i];
+          star.z -= speed + star.s*0.05;
+          star.x += yaw*1.1; // slight drift with mouse
+          star.y += pitch*1.1;
+
+          if (star.z <= 1 || star.x < -w*2 || star.x > w*2 || star.y < -h*2 || star.y > h*2){
+            stars[i] = randomStar();
+            continue;
+          }
+
+          const scale = fov / (fov + star.z);
+          const x2d = star.x * scale + cx;
+          const y2d = star.y * scale + cy;
+          const size = Math.max(1, star.s * scale * 3);
+
+          // neon-ish hue flicker
+          const glow = 0.65 + Math.sin((i + performance.now()/1200)) * 0.35;
+          ctx.fillStyle = `rgba(${Math.floor(124*glow)},${Math.floor(200 + 55*glow)},255,${0.7*scale})`;
+          ctx.beginPath();
+          ctx.arc(x2d, y2d, size, 0, Math.PI*2);
+          ctx.fill();
+        }
+
+        requestAnimationFrame(draw);
+      }
+
+      function onMove(e){
+        const p = e.touches ? e.touches[0] : e;
+        mouseX = p.clientX; mouseY = p.clientY;
+      }
+
+      // Setup
+      reduceMotion = window.matchMedia && window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+      resize(); init(); draw();
+      window.addEventListener('resize', ()=>{ resize(); init(); });
+      window.addEventListener('mousemove', onMove, {passive:true});
+      window.addEventListener('touchmove', onMove, {passive:true});
+    })();
+
+    // ---------- Subtle 3D tilt on hero panel ----------
+    (function(){
+      const card = document.getElementById('tiltCard');
+      let rect;
+      function setRect(){ rect = card.getBoundingClientRect(); }
+      function tilt(e){
+        const x = (e.clientX - rect.left) / rect.width - 0.5;
+        const y = (e.clientY - rect.top) / rect.height - 0.5;
+        const rX = (y * -8).toFixed(2);
+        const rY = (x * 10).toFixed(2);
+        card.style.transform = `perspective(900px) rotateX(${rX}deg) rotateY(${rY}deg) translateZ(0)`;
+      }
+      function reset(){ card.style.transform = 'none'; }
+      setRect();
+      window.addEventListener('resize', setRect);
+      card.addEventListener('mousemove', tilt);
+      card.addEventListener('mouseleave', reset);
+      card.addEventListener('blur', reset);
+    })();
+  </script>
+</body>
 </html>
