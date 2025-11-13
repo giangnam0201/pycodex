@@ -18,20 +18,7 @@ look, responsiveness, and the core features most people expect from VS Code—wi
 > This is not affiliated with Microsoft or VS Code.
 
 ## Quick start
-```bash
-# 1) create & activate a virtualenv (optional but recommended)
-python -m venv .venv
-# Windows: .venv\Scripts\activate
-# macOS/Linux:
-source .venv/bin/activate
-
-# 2) install dependencies
-pip install -r requirements.txt
-
-# 3) run
-python run.py .            # open current folder as workspace
-python run.py path\to\project
-```
+- Install or get soruce code of PyCodeX at https://giangnam0201.github.io/pycodex/
 
 ### Keys
 - Ctrl+O: Open file dialog
